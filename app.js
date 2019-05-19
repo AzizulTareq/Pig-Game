@@ -6,6 +6,7 @@ startGame();
 document.querySelector('.btn-roll').addEventListener('click', function(){
     //when we click on 'ROLL DICE'
     if(gamePlaying){
+        //for random dice number
         var dice = Math.floor(Math.random() * 6) +1;
     
         var diceDOM = document.querySelector('.dice');
