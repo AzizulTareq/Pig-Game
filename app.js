@@ -1,10 +1,15 @@
+
 var scores, roundScore, activePlayer, gamePlaying;
+
+//see the function startGame() at the buttom of the code
 
 startGame();
 
 
 document.querySelector('.btn-roll').addEventListener('click', function(){
+    
     //when we click on 'ROLL DICE'
+    
     if(gamePlaying){
         //for random dice number
         var dice = Math.floor(Math.random() * 6) +1;
@@ -12,6 +17,8 @@ document.querySelector('.btn-roll').addEventListener('click', function(){
         var diceDOM = document.querySelector('.dice');
         diceDOM.style.display = 'block';
         diceDOM.src = 'dice-'+ dice +'.png';
+        
+      //when dice no is 1
     
         if(dice !== 1){
             roundScore += dice;
@@ -29,6 +36,7 @@ document.querySelector('.btn-hold').addEventListener('click', function(){
         document.querySelector('#score-'+ activePlayer).textContent = scores[activePlayer];
     
         if(scores[activePlayer] >= 100){
+            
             document.querySelector('#name-'+ activePlayer).textContent = 'Winner!';
             document.querySelector('.dice').style.display = 'none';
             document.querySelector('.player-'+ activePlayer + '-panel').classList.add('winner');
