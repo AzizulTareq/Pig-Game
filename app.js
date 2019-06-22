@@ -1,6 +1,5 @@
 
 var scores, roundScore, activePlayer, gamePlaying;
-
 //see the function startGame() at the buttom of the code
 
 startGame();
